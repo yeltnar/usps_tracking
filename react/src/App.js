@@ -4,21 +4,34 @@ import './App.css';
 
 let loaded=false;
 
-function App() {
+function App(props) {
+  
+  const {app_id} = props;
+
+  if( app_id===undefined ){
+    const problem_str = "app_id is not defined";
+    alert(problem_str)
+    throw new Error(problem_str);
+  }
+
+  const google_app_url = `https://script.google.com/macros/s/${app_id}/exec`;
 
   const [status_obj,setStatusObj] = useState();
   const [show_delivered,setShowDelivered] = useState(false);
+  const [loading_data,setLoadingData] = useState(false);
 
   const button_text = show_delivered===true ? "Hide Delivered" : "Show Delivered";
 
   if( loaded===false ){
     loaded=true;
-    fetch("https://script.google.com/macros/s/AKfycbyXu14SmYLFh4eiWNkrSWc3cIF6-t625qL1huuvwv8P9E4q9zc3/exec")
+    setLoadingData(true);
+    fetch(google_app_url)
     .then((resp)=>{
       return resp.json();
     })
     .then((resp)=>{
       setStatusObj(resp);
+      setLoadingData(false);
     })
   }
 
@@ -33,8 +46,15 @@ function App() {
     }
   }
 
-  return (<div format="json">
-    <button onClick={()=>{setShowDelivered(!show_delivered);}}>{button_text}</button>
+  const top_bar_style = {
+    backgroundColor: loading_data===true ? "yellow" : "green",
+  }
+
+  return (<div>
+    <div style={top_bar_style}>
+      <button onClick={()=>{setShowDelivered(!show_delivered);}}>{button_text}</button>
+      <button onClick={()=>{updateList();}}>Update List</button>
+    </div>
     <div>{tracking_elements}</div>
   </div>);
 
@@ -47,6 +67,21 @@ function App() {
       }
     }
     return local_status_obj
+  }
+
+  function updateList(){
+    setLoadingData(true);
+    fetch(google_app_url, {
+      method: 'POST',
+      cache: 'no-cache',
+      redirect: 'follow'
+    })
+    .then(resp=>resp.json())
+    .then((resp)=>{
+      console.log(resp);
+      setStatusObj(resp.report_obj);
+      setLoadingData(false);
+    });
   }
 }
 
