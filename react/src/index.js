@@ -4,7 +4,22 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const app_id = getQueryValue("app_id");
+const app_id = (()=>{
+  let app_id = getQueryValue("app_id");
+
+  if( app_id===undefined || app_id===null ){
+    app_id = localStorage.getItem("app_id");
+  }else{
+    localStorage.setItem("app_id", app_id);
+  }
+
+  if( app_id===undefined || app_id===null ){
+    debugger
+    throw new Error("unknown app_id");
+  }
+
+  return app_id;
+})();
 
 ReactDOM.render(<App app_id={app_id} />, document.getElementById('root'));
 
