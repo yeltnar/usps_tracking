@@ -88,17 +88,11 @@ function App(props) {
 function TrackingElement(props){
   const {tracking_obj}=props;
   const [ele_name,setEleName] = useState();
-  
-  if( ele_name===undefined ){
-    getEleName(tracking_obj.tracking_number).then((new_ele_name)=>{
-      setEleName(new_ele_name);
-    });
-  }
 
   return (<div>
     <div><a href={`https://tools.usps.com/go/TrackConfirmAction?tLabels=${tracking_obj.tracking_number}`}>Tracking Link</a></div>
     <br/>
-    <div>Name: {ele_name}</div>
+    <div>Name: {tracking_obj.tracking_name}</div>
     <div>Number: {tracking_obj.tracking_number}</div>
     <br/>
     <div>Delivered: {tracking_obj.has_delivered+""}</div>
