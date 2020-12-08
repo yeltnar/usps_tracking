@@ -15,7 +15,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build_cp": "npm run build && rm -rf /keybase/public/droodle_b/usps_tracker/* && cp -r build/* /keybase/public/droodle_b/usps_tracker/"
+    "build_cp": "npm run build && rm -rf /Volumes/keybase/public/droodle_b/usps_tracker/* && cp -R build/* /Volumes/keybase/public/droodle_b/usps_tracker/"
   },
   "eslintConfig": {
     "extends": "react-app"
