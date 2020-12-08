@@ -98,7 +98,7 @@ function TrackingElement(props){
     <div>Delivered: {tracking_obj.has_delivered+""}</div>
     <br/>
     <div>Last status ({new Date(tracking_obj.status_arr[0].date).toString()}):</div>
-    <div>{tracking_obj.status_arr[0].body}</div>
+    <div>{tracking_obj.status_arr[0].status}</div>
     <div></div>
     {/* <div>{JSON.stringify(tracking_obj,null,2)}</div> */}
     <hr></hr>
