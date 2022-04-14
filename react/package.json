@@ -16,7 +16,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "_build_cp": "npm run build && rm -rf /Volumes/keybase/public/droodle_b/usps_tracker/* && cp -R build/* /Volumes/keybase/public/droodle_b/usps_tracker/",
-    "build_cp": "npm run build && rm -rf ../docs && mv build ../docs"
+    "build_cp": "npm run build && rm -rf ../docs && mv build ../docs",
+    "publish": "yarn build_cp && git add ../docs && git commit -m 'build' && git push"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -33,5 +34,5 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "/usps_tracker"
+  "homepage": "/usps_tracking"
 }
