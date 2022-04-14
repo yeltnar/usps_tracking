@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/usps_tracker/static/css/main.5f361e03.chunk.css",
-    "main.js": "/usps_tracker/static/js/main.cb58df47.chunk.js",
-    "main.js.map": "/usps_tracker/static/js/main.cb58df47.chunk.js.map",
-    "runtime-main.js": "/usps_tracker/static/js/runtime-main.2c25b66f.js",
-    "runtime-main.js.map": "/usps_tracker/static/js/runtime-main.2c25b66f.js.map",
-    "static/js/2.8c849084.chunk.js": "/usps_tracker/static/js/2.8c849084.chunk.js",
-    "static/js/2.8c849084.chunk.js.map": "/usps_tracker/static/js/2.8c849084.chunk.js.map",
-    "index.html": "/usps_tracker/index.html",
-    "precache-manifest.fce488ad009cba19f83e61c7f908931f.js": "/usps_tracker/precache-manifest.fce488ad009cba19f83e61c7f908931f.js",
-    "service-worker.js": "/usps_tracker/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/usps_tracker/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.8c849084.chunk.js.LICENSE.txt": "/usps_tracker/static/js/2.8c849084.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/usps_tracker/static/media/logo.5d5d9eef.svg"
+    "main.css": "/usps_tracking/static/css/main.5f361e03.chunk.css",
+    "main.js": "/usps_tracking/static/js/main.06d0583b.chunk.js",
+    "main.js.map": "/usps_tracking/static/js/main.06d0583b.chunk.js.map",
+    "runtime-main.js": "/usps_tracking/static/js/runtime-main.d61fd780.js",
+    "runtime-main.js.map": "/usps_tracking/static/js/runtime-main.d61fd780.js.map",
+    "static/js/2.8c849084.chunk.js": "/usps_tracking/static/js/2.8c849084.chunk.js",
+    "static/js/2.8c849084.chunk.js.map": "/usps_tracking/static/js/2.8c849084.chunk.js.map",
+    "index.html": "/usps_tracking/index.html",
+    "precache-manifest.4439eac01d2ba2b9ff61d68d377a8797.js": "/usps_tracking/precache-manifest.4439eac01d2ba2b9ff61d68d377a8797.js",
+    "service-worker.js": "/usps_tracking/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/usps_tracking/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.8c849084.chunk.js.LICENSE.txt": "/usps_tracking/static/js/2.8c849084.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/usps_tracking/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2c25b66f.js",
+    "static/js/runtime-main.d61fd780.js",
     "static/js/2.8c849084.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.cb58df47.chunk.js"
+    "static/js/main.06d0583b.chunk.js"
   ]
 }
